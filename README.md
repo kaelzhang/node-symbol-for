@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/kaelzhang/node-symbol-for.svg?branch=master)](https://travis-ci.org/kaelzhang/node-symbol-for)
-[![Coverage](https://codecov.io/gh/kaelzhang/node-symbol-for/branch/master/graph/badge.svg)](https://codecov.io/gh/kaelzhang/node-symbol-for)
 <!-- optional appveyor tst
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/kaelzhang/node-symbol-for?branch=master&svg=true)](https://ci.appveyor.com/project/kaelzhang/node-symbol-for)
 -->
@@ -15,7 +14,7 @@
 
 # symbol-for
 
-<!-- description -->
+A silly ponyfill for `Symbol`, `Symbol.for` and `Symbol.keyFor`.
 
 ## Install
 
@@ -26,7 +25,11 @@ $ npm install symbol-for
 ## Usage
 
 ```js
-import symbol_for from 'symbol-for'
+import symbol from 'symbol-for'
+
+symbol('a')
+symbol.for('a')
+symbol.keyFor(symbol.for('a'))  // 'a'
 ```
 
 ## License
