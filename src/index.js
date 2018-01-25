@@ -14,6 +14,8 @@ function factory () {
   }
 }
 
-module.exports = typeof Symbol === 'function'
+const symbol = typeof Symbol === 'function'
   ? Symbol
   : factory()
+
+export default symbol
